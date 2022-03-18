@@ -1,1 +1,1 @@
-# Foundations_webdevelopment
+Dance Studio website- it's a website where you can register and login, and look up the schedule of the dance studio. You can also book a class on the website. 
