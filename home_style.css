@@ -3,7 +3,7 @@
     padding: 0;
 }
 body {
-    font-family: "Open Sans", sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: black;
     height: 100%;
 
@@ -23,7 +23,7 @@ body {
 }
 
 .logo {
-    font-weight: normal;
+    font-weight: 900;
     font-style: normal;
     font-size: 64px;
     
@@ -32,17 +32,22 @@ body {
     position: relative;
     left: 20px;
     top: 10px;
+    transition: 400ms;
+}
+
+.logo:hover{
+    transform: translateY(-8px)
 }
 
 .second_logo{
     font-style: normal;
-    font-weight: normal;
+    font-weight: 900;
     font-size: 24px;
     line-height: 33px;
 
     color: #FFFFFF;
     position: relative;
-    top: -20px;
+    top: -30px;
     left: 20px;
 
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -62,32 +67,65 @@ nav {
 
     position: relative;
     right: 100px;
-    top: -100px;
+    top: -120px;
     float: right;
 }
 
-nav ul{
+nav ul {
     width: 300px;
     list-style: none;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    padding: 8px 70px;
     
 }
 
 nav ul a{
     color: #000000;
-    
+    font-weight: 900;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+nav ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #000000;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+nav ul li:hover::after{
+    width: 100%;
 }
 
 .login {
     position: relative;
-    right: -100px;
+    right: -120px;
 }
 
 .login a{
     color: #ffffff;
     text-decoration: none;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-weight: 900;
+}
+
+.login::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #ffffff;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.login:hover::after{
+    width: 100%;
 }
 
 /* the end of the header*/
@@ -97,7 +135,8 @@ nav ul a{
     flex-direction: row;
     position: relative;
     left: 100px;
-    height: calc(100% - 225px);
+    margin-top: 110px;
+    margin-bottom: 110px;
 }
 
 .content img {
@@ -109,7 +148,6 @@ nav ul a{
 .content p {
     color: #FFFFFF;
     font-size: 24px;
-    font-family: 'Droid serif', serif;
     position: relative;
     top: 200px;
 }
@@ -118,11 +156,12 @@ nav ul a{
 /* the start of the footer*/
 
 footer {
-    height: 75px;
+    height: 80px;
     background-color: #B60000;
     display: flex;
     justify-content: space-around;
-
+    margin-bottom: 0px;
+    
 }
 
 
@@ -130,7 +169,10 @@ footer p {
     color: #FFFFFF;
     font-size: 30px;
     position: relative;
+    font-weight: 900;
     top: 10px;
+    left: 200px;
+    font-weight: 900;
 
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -138,8 +180,22 @@ footer p {
 .socialIcons {
     position: relative;
     top: 10px;
+}
+
+footer ul {
+    width: 400px;
+    list-style: none;
     display: flex;
     flex-direction: row;
-    list-style: none;
-    
+    justify-content: space-around;
+    padding: 8px 80px;
+ 
+}
+
+footer ul li{
+    transition: 400ms;
+}
+
+footer ul li:hover{
+    transform: translateY(-8px)
 }
