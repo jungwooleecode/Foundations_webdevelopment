@@ -2,8 +2,11 @@
 <html>
     <head>
         <meta name="viewport" content="with=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title> Welcome to Dance Studio! </title>
         <link rel="stylesheet" href="login_style.css">
+        <script src="showpw.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com"> 
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
@@ -36,6 +39,47 @@
             </nav>
         </div>
 
+        <div class="content">
+            <div class="Login">
+                <h1>
+                    Log in <br>
+                </h1>
+                <div class="email">
+                    <p>
+                        Email <br>
+                    </p>
+
+                    <box>
+                        <input type="text" placeholder="" id="emailinput"> <br>
+                    </box>
+                </div>
+
+                <div class="password">
+                    <p>
+                        Password <br>
+                    </p>
+                    <box>
+                        <input type="password" placeholder="" id="pwinput"> <br>
+                    </box>
+                    <checkbox>
+                        <input type="checkbox" onclick="visibleFunction()"> Show Password <br>
+                    </checkbox>
+                </div>
+
+                <a href="forgot.html" class="forgotpassword">
+                    Forgot password?
+                </a>
+
+                <a href="home.html" class="confirm">
+                    Log in
+                </a>
+
+            </div>
+
+            <img src="images/login.jpg" alt="">
+            
+
+        </div>
 
        
 
