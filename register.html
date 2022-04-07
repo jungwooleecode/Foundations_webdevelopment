@@ -6,6 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title> Welcome to Dance Studio! </title>
         <link rel="stylesheet" href="register_style.css">
+        <script src="showpw.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com"> 
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
@@ -38,7 +39,26 @@
             </nav>
         </div>
 
+        <div class="content">
+            <h1>
+                Register
+            </h1>
+            <email>
+                Email <br> <input type="text" placeholder="" id="emailinput"> <br>
+            </email>
+            <name>
+                Name <br> <input type="text" placeholder="" id="name"> <br>
+            </name>
+            <pw>
+                Password <br> <input type="password" placeholder="" id="pwinput"> <br>
+                <checkbox>
+                    <input type="checkbox" onclick="visibleFunction()">Show password <br>
+                </checkbox>
+            </pw>
 
+            <a href="home.html" class="register">Sign up</a>
+
+        </div>
        
 
 

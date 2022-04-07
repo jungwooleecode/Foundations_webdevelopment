@@ -140,11 +140,11 @@ nav ul li:hover::after{
 }
 
 .Login h1{
-    font-weight: 400;
+    font-weight: 900;
     font-size: 64px;
     line-height: 100px;
     text-align: center;
-    text-shadow: -5px 0 #A50000, 0 5px #A50000, 5px 0 #A50000, 0 5px #A50000;;
+    text-shadow: -5px 0 #A50000, 0 5px #A50000, 5px 0 #A50000, 0 5px #A50000;
 }
 
 .email{
@@ -165,9 +165,6 @@ nav ul li:hover::after{
     padding: 12px 48px;
 }
 
-/*custom checkbox*/
-
-/*checkbox end*/
 .forgotpassword {
     text-decoration: none;
     color: #ED4D4D;
@@ -211,7 +208,7 @@ nav ul li:hover::after{
 .confirm:hover{
     border: 1px solid #ffffff;
     background:#A50000;
-    transition: 300ms;
+    transition: 500ms;
 }
 
 .content img{
