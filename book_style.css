@@ -130,6 +130,86 @@ nav ul li:hover::after{
 
 /* the end of the header*/
 
+.content {
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    margin: 70px 30px;
+    align-items: center;
+    position: relative;
+    left: 200px;
+}
+
+.content h1{
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+.content h2, h3{
+    font-size: 25px;
+}
+
+.content h2::after{
+    content: '';
+    display: block;
+    height: 2px;
+    background: #ED4D4D;
+    width: 70%;
+    margin-bottom: 10px;
+}
+
+.content p{
+    font-size: 20px;
+}
+
+.content h3{
+    margin-top: 30px;
+    
+}
+
+.content h3::after{
+    content: '';
+    display: block;
+    height: 2px;
+    background: #ED4D4D;
+    width: 85%;
+    margin-bottom: 20px;
+}
+
+.content radiobutton {
+    font-size: 20px;
+}
+
+.complete{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 35px;
+    border: 1px solid #FFFFFF;
+    padding: 6px 23px;
+
+    position: relative;
+    left: 50px;
+    top: 100px;
+
+    cursor: pointer;
+    transition: 500ms;
+    
+}
+
+.complete:hover{
+    background: #B60000;
+}
+
+.left {
+    margin-bottom: 100px;
+}
+
+.content img{
+    width: 560px;
+    height: auto;
+    position: relative;
+    left: 100px;
+}
 
 
 
