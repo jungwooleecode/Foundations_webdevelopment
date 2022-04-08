@@ -5,7 +5,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title> Welcome to Dance Studio! </title>
-        <link rel="stylesheet" href="register_style.css">
+        <link rel="stylesheet" href="reset_style.css">
+        <script src="showpw.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com"> 
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
@@ -38,7 +39,23 @@
             </nav>
         </div>
 
+        <div class="content">
+            <h1>
+                Reset your password <br>
+            </h1>
 
+            <box>
+                New password <br><input type="password" placeholder="" id="pwinput"> <br>
+                <checkbox>
+                    <input type="checkbox" onclick="visibleFunction()">Show password <br>
+                </checkbox>
+            </box>
+
+            <a href="home.html" class="confirm">
+                Confirm
+            </a>
+
+        </div>
        
 
 
