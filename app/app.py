@@ -1,13 +1,14 @@
 from flask import Flask, render_template
+from . import templates
 
 app= Flask(__name__)
 
-@app.route("/")
-def home():
+@app.route('/')
+def index():
     return render_template("index.html")
 
 def create_app():
-    app=Flask(__name__)
+  
     return app
 
 
