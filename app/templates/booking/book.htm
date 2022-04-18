@@ -1,122 +1,48 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta name="viewport" content="with=device-width, initial-scale=1.0">
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title> Welcome to Dance Studio! </title>
-        <link rel="stylesheet" href="book_style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com"> 
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <div class="header">
-            <div class="logos">
-                <div class="logo">
-                    <a href="home.html">Dance Studio <br></a>
-                </div>
-                <div class="second_logo">
-                    <br>: a place for everyone 
-                </div>
-            </div>
-            <nav>
-                <ul class="header items">
-                    <li>
-                        <a href="about.htm">About</a>
-                    </li>
-                    <li>
-                        <a href="schedule.htm">Schedule</a>
-                    </li>
-                    <li>
-                        <a href="register.html">Register</a>
-                    </li>
-                </ul>
-                <div class="login">
-                    <a href="login.html">or LOG IN </a>
-                </div>
-            </nav>
-        </div>
+{% extends 'base.html' %}
 
-
-       <div class="content">
-           <div class="left">
-                <h1>
-                    Hi name!
-                </h1>
-                <info>
-                    <h2>
-                        CLASS BOOKING INFO
-                    </h2>
-                    <p>
-                        dancer's name <br>
-                    </p>
-                    <p>
-                        class name <br>
-                    </p>
-                    <p>
-                        time <br>
-                    </p>
-                    <p>
-                        Address: dancestraße 30-35, 10969 Berlin <br>
-                    </p>
-                    <p>
-                        Price: 14€ <br>
-                    </p>
-                </info>
-                <payment>
-                    <h3>
-                        CHOOSE PAYMENT OPTION
-                    </h3>
-                    <radiobutton>
-                        <input type="radio" name="payment" id="card" value="Card">
-                        <label for="card">Card</label><br>
-                        <input type="radio" name="payment" id="paypal" value="PayPal">
-                        <label for="paypal">PayPal</label><br>
-                    </radiobutton>
-                </payment>
-                
-                <a href="bookingComplete.html" class="complete">
-                    Confirm
-                </a>
-            </div>
-            <img src="images/book.jpg" alt="">
-       </div>
-
-
-        <footer>
-            <div class="location">
+{% block body %}
+    <div class="content">
+        <div class="left">
+            <h1>
+                Hi name!
+            </h1>
+            <info>
+                <h2>
+                    CLASS BOOKING INFO
+                </h2>
                 <p>
-                    LOCATION: <br>
-                    dancestraße 30-35, 10969 Berlin<br>
-                    
+                    dancer's name <br>
                 </p>
-            </div>
-            <div class="contact">
-                <p>Contact: 0176 80000007</p>
-            </div>
-            <ul class="socialIcons">
-                <li>
-                    <a href="mailto:jung.lee@code.berlin">
-                        <img src="images/mailicon.svg" alt="mail">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-                        <img src="images/fbicon.png" alt="facebook">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-                        <img src="images/instaicon.png" alt="instagram">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
-                        <img src="images/youtubeicon.png" alt="youtube">
-                    </a>
-                </li>
-            </ul>
-        </footer>
-    </body>
-</html>
+                <p>
+                    class name <br>
+                </p>
+                <p>
+                    time <br>
+                </p>
+                <p>
+                    Address: dancestraße 30-35, 10969 Berlin <br>
+                </p>
+                <p>
+                    Price: 14€ <br>
+                </p>
+            </info>
+            <payment>
+                <h3>
+                    CHOOSE PAYMENT OPTION
+                </h3>
+                <radiobutton>
+                    <input type="radio" name="payment" id="card" value="Card">
+                    <label for="card">Card</label><br>
+                    <input type="radio" name="payment" id="paypal" value="PayPal">
+                    <label for="paypal">PayPal</label><br>
+                </radiobutton>
+            </payment>
+            
+            <a href="bookingComplete.html" class="complete">
+                Confirm
+            </a>
+        </div>
+        <img src="../static/images/book.jpg" alt="">
+    </div>
+
+{% endblock %}

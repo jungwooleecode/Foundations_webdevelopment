@@ -1,122 +1,45 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta name="viewport" content="with=device-width, initial-scale=1.0">
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title> Welcome to Dance Studio! </title>
-        <link rel="stylesheet" href="login_style.css">
-        <script src="showpw.js"></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com"> 
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <div class="header">
-            <div class="logos">
-                <div class="logo">
-                    <a href="home.html">Dance Studio <br></a>
-                </div>
-                <div class="second_logo">
-                    <br>: a place for everyone 
-                </div>
-            </div>
-            <nav>
-                <ul class="header items">
-                    <li>
-                        <a href="about.htm">About</a>
-                    </li>
-                    <li>
-                        <a href="schedule.htm">Schedule</a>
-                    </li>
-                    <li>
-                        <a href="register.html">Register</a>
-                    </li>
-                </ul>
-                <div class="login">
-                    <a href="login.html">or LOG IN </a>
-                </div>
-            </nav>
-        </div>
+{% extends 'base.html' %}
 
-        <div class="content">
-            <div class="Login">
-                <h1>
-                    Log in <br>
-                </h1>
-                <div class="email">
-                    <p>
-                        Email <br>
-                    </p>
-
-                    <box>
-                        <input type="text" placeholder="" id="emailinput"> <br>
-                    </box>
-                </div>
-
-                <div class="password">
-                    <p>
-                        Password <br>
-                    </p>
-                    <box>
-                        <input type="password" placeholder="" id="pwinput"> <br>
-                    </box>
-                    <checkbox>
-                        <input type="checkbox" onclick="visibleFunction()"> Show password <br>
-                    </checkbox>
-                </div>
-
-                <a href="forgot.html" class="forgotpassword">
-                    Forgot password?
-                </a>
-
-                <a href="home.html" class="confirm">
-                    Log in
-                </a>
-
-            </div>
-
-            <img src="images/login.jpg" alt="">
-            
-
-        </div>
-
-       
-
-
-        <footer>
-            <div class="location">
+{% block body %}
+    <div class="content">
+        <div class="Login">
+            <h1>
+                Log in <br>
+            </h1>
+            <div class="email">
                 <p>
-                    LOCATION: <br>
-                    dancestraße 30-35, 10969 Berlin<br>
-                    
+                    Email <br>
                 </p>
+
+                <box>
+                    <input type="text" placeholder="" id="emailinput"> <br>
+                </box>
             </div>
-            <div class="contact">
-                <p>Contact: 0176 80000007</p>
+
+            <div class="password">
+                <p>
+                    Password <br>
+                </p>
+                <box>
+                    <input type="password" placeholder="" id="pwinput"> <br>
+                </box>
+                <checkbox>
+                    <input type="checkbox" onclick="visibleFunction()"> Show password <br>
+                </checkbox>
             </div>
-            <ul class="socialIcons">
-                <li>
-                    <a href="mailto:jung.lee@code.berlin">
-                        <img src="images/mailicon.svg" alt="mail">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-                        <img src="images/fbicon.png" alt="facebook">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-                        <img src="images/instaicon.png" alt="instagram">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
-                        <img src="images/youtubeicon.png" alt="youtube">
-                    </a>
-                </li>
-            </ul>
-        </footer>
-    </body>
-</html>
+
+            <a href="forgot.html" class="forgotpassword">
+                Forgot password?
+            </a>
+
+            <a href="home.html" class="confirm">
+                Log in
+            </a>
+
+        </div>
+
+        <img src="../static/images/login.jpg" alt="">
+        
+
+    </div>
+{% endblock %}
