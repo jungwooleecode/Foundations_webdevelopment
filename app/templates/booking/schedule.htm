@@ -1,193 +1,118 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta name="viewport" content="with=device-width, initial-scale=1.0">
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title> Welcome to Dance Studio! </title>
-        <link rel="stylesheet" href="schedule_style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com"> 
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <div class="header">
-            <div class="logos">
-                <div class="logo">
-                    <a href="home.html">Dance Studio <br></a>
-                </div>
-                <div class="second_logo">
-                    <br>: a place for everyone 
-                </div>
+{% extends 'base.html' %}
+
+{% block body %}
+    <div class="content">
+        <h1>
+            Schedule
+        </h1>
+        <hr class="first">
+        <div class="menubar">
+
+            <div class="arrow">
+                <img src="../static/images/leftarrow.svg" alt="" class="left">
+                <img src="../static/images/rightarrow.svg" alt="" class="right">
             </div>
-            <nav>
-                <ul class="header items">
-                    <li>
-                        <a href="about.htm">About</a>
-                    </li>
-                    <li>
-                        <a href="schedule.htm">Schedule</a>
-                    </li>
-                    <li>
-                        <a href="register.html">Register</a>
-                    </li>
-                </ul>
-                <div class="login">
-                    <a href="login.html">or LOG IN </a>
-                </div>
-            </nav>
+
         </div>
 
-        <!---three instructors, three levels honey J, Monica, Aiki & Beginner Advanced Master--->
+        <hr class="second">
 
-       <div class="content">
-            <h1>
-                Schedule
-            </h1>
-            <hr class="first">
-            <div class="menubar">
+        <h2>
+            April 2022 <br>
+        </h2>
 
-                <div class="arrow">
-                    <img src="images/leftarrow.svg" alt="" class="left">
-                    <img src="images/rightarrow.svg" alt="" class="right">
-                </div>
+        <div class="table">
 
-            </div>
+            <table>
+                <tr class="date">
+                    <th> 22 </th>
+                    <th> 23 </th>
+                    <th> 24 </th>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="classInfo.htm" style="display:block; text-decoration: none; color: #ffffff;">
+                            5:30 - 6:50 PM <br><br>
+                            Monica<br><br>
+                            beginner
+                        </a>
+                    </td>
 
-            <hr class="second">
+                    <td>
+                        <a href="classInfo.htm" style="display:block; text-decoration: none; color: #ffffff;">
+                            5:30 - 6:50 PM <br><br>
+                            Monica<br><br>
+                            beginner
+                        </a>
+                    </td>
 
-            <h2>
-                April 2022 <br>
-            </h2>
+                    <td>
+                        <a href="classInfo.htm" style="display:block; text-decoration: none; color: #ffffff;">
+                            5:30 - 6:50 PM <br><br>
+                            Monica<br><br>
+                            beginner
+                        </a>
+                    </td>
 
-            <div class="table">
+                </tr>
 
-                <table>
-                    <tr class="date">
-                        <th> 22 </th>
-                        <th> 23 </th>
-                        <th> 24 </th>
-                    </tr>
-                    <tr>
-                        <td>
-                            <a href="classInfo.htm" style="display:block; text-decoration: none; color: #ffffff;">
-                                5:30 - 6:50 PM <br><br>
-                                Monica<br><br>
-                                beginner
-                            </a>
-                        </td>
+                <tr>
+                    <td>
+                        <a href="classInfo.htm" style="display:block; text-decoration: none; color: #ffffff;">
+                            7:30 - 8:50 PM <br><br>
+                            Honey J<br><br>
+                            Advanced
+                        </a>
+                    </td>
 
-                        <td>
-                            <a href="classInfo.htm" style="display:block; text-decoration: none; color: #ffffff;">
-                                5:30 - 6:50 PM <br><br>
-                                Monica<br><br>
-                                beginner
-                            </a>
-                        </td>
+                    <td>
+                        <a href="classInfo.htm" style="display:block; text-decoration: none; color: #ffffff;">
+                            7:30 - 8:50 PM <br><br>
+                            Honey J<br><br>
+                            Advanced
+                        </a>
+                    </td>
 
-                        <td>
-                            <a href="classInfo.htm" style="display:block; text-decoration: none; color: #ffffff;">
-                                5:30 - 6:50 PM <br><br>
-                                Monica<br><br>
-                                beginner
-                            </a>
-                        </td>
+                    <td>
+                        <a href="classInfo.htm" style="display:block; text-decoration: none; color: #ffffff;">
+                            7:30 - 8:50 PM <br><br>
+                            Honey J<br><br>
+                            Advanced
+                        </a>
+                    </td>
 
-                    </tr>
+                </tr>
 
-                    <tr>
-                        <td>
-                            <a href="classInfo.htm" style="display:block; text-decoration: none; color: #ffffff;">
-                                7:30 - 8:50 PM <br><br>
-                                Honey J<br><br>
-                                Advanced
-                            </a>
-                        </td>
+                <tr>
+                    <td>
+                        <a href="classInfo.htm" style="display:block; text-decoration: none; color: #ffffff;">
+                            9:30 - 10:50 PM <br><br>
+                            Aiki<br><br>
+                            Master
+                        </a>
+                    </td>
 
-                        <td>
-                            <a href="classInfo.htm" style="display:block; text-decoration: none; color: #ffffff;">
-                                7:30 - 8:50 PM <br><br>
-                                Honey J<br><br>
-                                Advanced
-                            </a>
-                        </td>
+                    <td>
+                        <a href="classInfo.htm" style="display:block; text-decoration: none; color: #ffffff;">
+                            9:30 - 10:50 PM <br><br>
+                            Aiki<br><br>
+                            Master
+                        </a>
+                    </td>
 
-                        <td>
-                            <a href="classInfo.htm" style="display:block; text-decoration: none; color: #ffffff;">
-                                7:30 - 8:50 PM <br><br>
-                                Honey J<br><br>
-                                Advanced
-                            </a>
-                        </td>
+                    <td>
+                        <a href="classInfo.htm" style="display:block; text-decoration: none; color: #ffffff;">
+                            9:30 - 10:50 PM <br><br>
+                            Aiki<br><br>
+                            Master
+                        </a>
+                    </td>
 
-                    </tr>
+                </tr>
 
-                    <tr>
-                        <td>
-                            <a href="classInfo.htm" style="display:block; text-decoration: none; color: #ffffff;">
-                                9:30 - 10:50 PM <br><br>
-                                Aiki<br><br>
-                                Master
-                            </a>
-                        </td>
+            </table>
 
-                        <td>
-                            <a href="classInfo.htm" style="display:block; text-decoration: none; color: #ffffff;">
-                                9:30 - 10:50 PM <br><br>
-                                Aiki<br><br>
-                                Master
-                            </a>
-                        </td>
+        </div>
+    </div>
 
-                        <td>
-                            <a href="classInfo.htm" style="display:block; text-decoration: none; color: #ffffff;">
-                                9:30 - 10:50 PM <br><br>
-                                Aiki<br><br>
-                                Master
-                            </a>
-                        </td>
-
-                    </tr>
- 
-                </table>
-
-            </div>
-       </div>
-
-
-        <footer>
-            <div class="location">
-                <p>
-                    LOCATION: <br>
-                    dancestraße 30-35, 10969 Berlin<br>
-                    
-                </p>
-            </div>
-            <div class="contact">
-                <p>Contact: 0176 80000007</p>
-            </div>
-            <ul class="socialIcons">
-                <li>
-                    <a href="mailto:jung.lee@code.berlin">
-                        <img src="images/mailicon.svg" alt="mail">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-                        <img src="images/fbicon.png" alt="facebook">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-                        <img src="images/instaicon.png" alt="instagram">
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
-                        <img src="images/youtubeicon.png" alt="youtube">
-                    </a>
-                </li>
-            </ul>
-        </footer>
-    </body>
-</html>
+{% endblock %}
