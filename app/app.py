@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask
 from . import standard_page, booking, auth
 
 def create_app():
