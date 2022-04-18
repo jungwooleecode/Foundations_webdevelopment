@@ -9,8 +9,8 @@ def create_app():
 
 def register_blueprints(app: Flask):
     app.register_blueprint(standard_page.routes.blueprint)
-    #app.register_blueprint(booking.routes.blueprint)
-    #app.register_blueprint(auth.routes.blueprint)
+    app.register_blueprint(booking.routes.blueprint)
+    app.register_blueprint(auth.routes.blueprint)
 
 
 
