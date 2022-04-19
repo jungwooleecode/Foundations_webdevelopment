@@ -4,6 +4,7 @@ from app.extensions.database import db
 
 def create_app():
     app= Flask(__name__)
+    app.config.from_object('config')
 
     register_extensions(app)
     register_blueprints(app)
