@@ -19,6 +19,8 @@ def mailbox():
 def register():
     return render_template('auth/register.html')
 
+    
+
 @blueprint.route('/reset')
 def reset():
     return render_template('auth/reset.html')
