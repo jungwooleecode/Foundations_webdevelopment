@@ -5,7 +5,7 @@ blueprint = Blueprint('booking', __name__)
 
 @blueprint.route('/book')
 def book():
-    return render_template('booking/book.html')
+    return render_template('booking/book.htm')
 
 @blueprint.route('/bookingcomplete')
 def bookingcomplete():
@@ -13,8 +13,8 @@ def bookingcomplete():
 
 @blueprint.route('/classinfo')
 def classinfo():
-    return render_template('booking/classinfo.html')
+    return render_template('booking/classinfo.htm')
 
 @blueprint.route('/schedule')
 def schedule():
-    return render_template('booking/schedule.html')
+    return render_template('booking/schedule.htm')

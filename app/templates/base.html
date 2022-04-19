@@ -10,8 +10,9 @@
             <link rel="preconnect" href="https://fonts.googleapis.com"> 
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
             <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+            {% block css %}{% endblock %}
         {% endblock %}
-        {% block css %}{% endblock %}
+        
     </head>
 <body>
 
@@ -27,17 +28,17 @@
         <nav>
             <ul class="header items">
                 <li>
-                    <a href="../templates/standard_page/about.htm">About</a>
+                    <a href="/about">About</a>
                 </li>
                 <li>
-                    <a href="../templates/booking/schedule.htm">Schedule</a>
+                    <a href="/schedule">Schedule</a>
                 </li>
                 <li>
-                    <a href="../templates/auth/register.html">Register</a>
+                    <a href="/register">Register</a>
                 </li>
             </ul>
             <div class="login">
-                <a href="../templates/auth/login.html">or LOG IN </a>
+                <a href="/login">or LOG IN </a>
             </div>
         </nav>
     </div>

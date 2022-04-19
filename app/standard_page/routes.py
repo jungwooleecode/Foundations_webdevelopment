@@ -9,4 +9,4 @@ def index():
 
 @blueprint.route('/about')
 def about():
-    return render_template('standard_page/about.html')
+    return render_template('standard_page/about.htm')
