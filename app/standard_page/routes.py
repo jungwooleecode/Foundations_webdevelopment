@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template
-from app.app import standard_page
+from app import standard_page
 
 blueprint = Blueprint('standard_page', __name__)
 

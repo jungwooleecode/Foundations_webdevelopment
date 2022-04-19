@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template
-from app.app import booking
+from app import booking
 
 blueprint = Blueprint('booking', __name__)
 
