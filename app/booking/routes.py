@@ -13,7 +13,7 @@ def bookingcomplete():
 
 @blueprint.route('/classinfo')
 def classinfo():
-    return render_template('booking/classinfo.htm')
+    return render_template('booking/classInfo.htm')
 
 @blueprint.route('/schedule')
 def schedule():
