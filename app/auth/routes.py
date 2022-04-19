@@ -1,5 +1,6 @@
 from flask import Blueprint, render_template
 from app import auth
+from .models import User
 
 blueprint = Blueprint('auth', __name__)
 
@@ -19,7 +20,7 @@ def mailbox():
 def register():
     return render_template('auth/register.html')
 
-    
+
 
 @blueprint.route('/reset')
 def reset():
