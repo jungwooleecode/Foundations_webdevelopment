@@ -1,6 +1,8 @@
 attrs==21.4.0
 click==8.1.2
 Flask==2.1.1
+Flask-SQLAlchemy==2.5.1
+greenlet==1.1.2
 iniconfig==1.1.1
 itsdangerous==2.1.2
 Jinja2==3.1.1
@@ -10,5 +12,7 @@ pluggy==1.0.0
 py==1.11.0
 pyparsing==3.0.8
 pytest==7.1.1
+python-dotenv==0.20.0
+SQLAlchemy==1.4.35
 tomli==2.0.1
 Werkzeug==2.1.1
