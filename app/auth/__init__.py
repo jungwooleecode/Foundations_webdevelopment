@@ -1,1 +1,1 @@
-from . import routes, models
+from app.auth import routes, models

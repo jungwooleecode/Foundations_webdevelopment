@@ -8,22 +8,26 @@
         <h1>
             My page
         </h1>
-        <p>If you want to make any change, you can make it here</p>
-        <name>
-            Name <br> <input type="text" placeholder="" id="name"> <br>
-        </name>
-        <email>
-            Email <br> <input type="text" placeholder="" id="email"> <br>
-        </email>
-        <pw>
-            Password <br> <input type="password" placeholder="" id="pw"> <br>
-            <checkbox>
-                <input type="checkbox" onclick="visibleFunction()">Show password <br>
-            </checkbox>
-        </pw>
+        {% for user in users%}
+            {% if user.id== 1 %}
+                <p>If you want to make any change, you can make it here</p>
+                <name>
+                    Name <br> <input type="text" placeholder={{user.name}} id="name"> <br>
+                </name>
+                <email>
+                    Email <br> <input type="text" placeholder={{user.email}} id="email"> <br>
+                </email>
+                <pw>
+                    Password <br> <input type="password" placeholder={{user.password}} id="pw"> <br>
+                    <checkbox>
+                        <input type="checkbox" onclick="visibleFunction()">Show password <br>
+                    </checkbox>
+                </pw>
 
-        <a href="/" class="confirm">Confirm</a>
-
+                <a href="/" class="confirm">Confirm</a>
+                
+            {% endif %}
+        {% endfor %}
     </div>
 
 {% endblock %}

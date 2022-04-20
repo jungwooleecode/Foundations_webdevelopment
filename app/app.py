@@ -1,5 +1,5 @@
 from flask import Flask
-from . import standard_page, booking, auth
+from app import standard_page, booking, auth
 from app.extensions.database import db, migrate
 
 def create_app():

@@ -22,7 +22,8 @@ def register():
 
 @blueprint.route('/mypage')
 def mypage():
-    return render_template('auth/mypage.html')
+    all_users=User.query.all()
+    return render_template('auth/mypage.html', users=all_users)
 
 @blueprint.route('/reset')
 def reset():
