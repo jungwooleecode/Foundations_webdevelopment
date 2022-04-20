@@ -20,7 +20,9 @@ def mailbox():
 def register():
     return render_template('auth/register.html')
 
-
+@blueprint.route('/mypage')
+def mypage():
+    return render_template('auth/mypage.html')
 
 @blueprint.route('/reset')
 def reset():
