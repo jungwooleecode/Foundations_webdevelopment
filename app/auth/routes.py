@@ -20,10 +20,10 @@ def mailbox():
 def register():
     return render_template('auth/register.html')
 
-@blueprint.route('/mypage')
-def mypage():
-    all_users=User.query.all()
-    return render_template('auth/mypage.html', users=all_users)
+@blueprint.route('/mypage/<int:id>')
+def mypage(id):
+    user= User.query.filter_by(id=id).first_or_404()
+    return render_template('auth/mypage.html', user=user)
 
 @blueprint.route('/reset')
 def reset():
