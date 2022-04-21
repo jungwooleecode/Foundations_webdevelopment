@@ -48,3 +48,27 @@
     border: 1px solid #FFFFFF;
 
 }
+
+.delete {
+    text-decoration: none;
+    color: #ED4D4D;
+    font-size: 18px;
+    font-weight: 900;
+    margin: 20px 0px 0px;
+    text-shadow: 0px 3px 3px #ED4D4D;
+}
+
+.delete::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #ED4D4D;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+ 
+}
+
+.delete:hover::after{
+    width: 100%;
+}
