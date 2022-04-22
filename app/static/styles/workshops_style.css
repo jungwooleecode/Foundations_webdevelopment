@@ -1,0 +1,11 @@
+
+.content {
+    margin: 70px 100px;
+    color: #FFFFFF;
+}
+
+.content h1{
+    font-size: 60px;
+    text-shadow: 5px 0 #A50000, 0 5px #A50000, 5px 0 #A50000, 0 5px #A50000;
+}
+
