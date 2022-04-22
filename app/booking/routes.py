@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template
 from app import booking
-from .models import Dance,Level
+from .models import Dance, Level
 import datetime
 
 blueprint = Blueprint('booking', __name__)
@@ -10,13 +10,9 @@ def book():
     return render_template('booking/book.htm')
 
 
-
-
-@blueprint.route('/bookingcomplete/')
+@blueprint.route('/bookingcomplete')
 def bookingcomplete():
     return render_template('booking/bookingComplete.html')
-
-
 
 
 @blueprint.route('/classinfo/<int:number>')

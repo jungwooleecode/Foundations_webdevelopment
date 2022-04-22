@@ -1,14 +1,14 @@
-from app.extensions.database import db
+from app.extensions.database import db, CRUDMixin
 
 
-class Dance(db.Model):
+class Dance(db.Model, CRUDMixin):
     id=db.Column(db.Integer, primary_key=True)
     first=db.Column(db.String(20))
     second=db.Column(db.String(20))
     third=db.Column(db.String(20))
     level_id = db.Column(db.Integer, db.ForeignKey('level.id'))
 
-class Level(db.Model):
+class Level(db.Model, CRUDMixin):
     id=db.Column(db.Integer, primary_key=True)
     first=db.Column(db.String(10))
     second=db.Column(db.String(10))
