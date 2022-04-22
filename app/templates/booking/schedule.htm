@@ -20,66 +20,48 @@
         <hr class="second">
 
         <h2>
-            April 2022 <br>
+            {{month}} {{year}} <br>
         </h2>
 
         <div class="table">
 
             <table>
                 <tr class="date">
-                    <th> 22 </th>
-                    <th> 23 </th>
-                    <th> 24 </th>
+                    <th> {{day}} </th>
+                    <th> {{day+1}} </th>
+                    <th> {{day+2}} </th>
+                    <th> {{day+3}} </th>
                 </tr>
                 <tr>
                     <td>
-                        <a href="/classinfo" style="display:block; text-decoration: none; color: #ffffff;">
+                        <a href="/classinfo/01" style="display:block; text-decoration: none; color: #ffffff;">
                             5:30 - 6:50 PM <br><br>
-                            Monica<br><br>
-                            beginner
+                            {{dances.0.first}}<br><br>
+                            {{dances.0.level.first}}
                         </a>
                     </td>
 
                     <td>
-                        <a href="/classinfo" style="display:block; text-decoration: none; color: #ffffff;">
+                        <a href="/classinfo/11" style="display:block; text-decoration: none; color: #ffffff;">
                             5:30 - 6:50 PM <br><br>
-                            Monica<br><br>
-                            beginner
+                            {{dances.1.first}}<br><br>
+                            {{dances.1.level.first}}
                         </a>
                     </td>
 
                     <td>
-                        <a href="/classinfo" style="display:block; text-decoration: none; color: #ffffff;">
+                        <a href="/classinfo/21" style="display:block; text-decoration: none; color: #ffffff;">
                             5:30 - 6:50 PM <br><br>
-                            Monica<br><br>
-                            beginner
-                        </a>
-                    </td>
-
-                </tr>
-
-                <tr>
-                    <td>
-                        <a href="/classinfo" style="display:block; text-decoration: none; color: #ffffff;">
-                            7:30 - 8:50 PM <br><br>
-                            Honey J<br><br>
-                            Advanced
+                            {{dances.2.first}}<br><br>
+                            {{dances.2.level.first}}
                         </a>
                     </td>
 
                     <td>
-                        <a href="/classinfo" style="display:block; text-decoration: none; color: #ffffff;">
-                            7:30 - 8:50 PM <br><br>
-                            Honey J<br><br>
-                            Advanced
-                        </a>
-                    </td>
-
-                    <td>
-                        <a href="/classinfo" style="display:block; text-decoration: none; color: #ffffff;">
-                            7:30 - 8:50 PM <br><br>
-                            Honey J<br><br>
-                            Advanced
+                        <a href="/classinfo/31" style="display:block; text-decoration: none; color: #ffffff;">
+                            5:30 - 6:50 PM <br><br>
+                            {{dances.3.first}}<br><br>
+                            {{dances.3.level.first}}
                         </a>
                     </td>
 
@@ -87,26 +69,69 @@
 
                 <tr>
                     <td>
-                        <a href="/classinfo" style="display:block; text-decoration: none; color: #ffffff;">
-                            9:30 - 10:50 PM <br><br>
-                            Aiki<br><br>
-                            Master
+                        <a href="/classinfo/02" style="display:block; text-decoration: none; color: #ffffff;">
+                            7:30 - 8:50 PM <br><br>
+                            {{dances.0.second}}<br><br>
+                            {{dances.0.level.second}}
                         </a>
                     </td>
 
                     <td>
-                        <a href="/classinfo" style="display:block; text-decoration: none; color: #ffffff;">
-                            9:30 - 10:50 PM <br><br>
-                            Aiki<br><br>
-                            Master
+                        <a href="/classinfo/12" style="display:block; text-decoration: none; color: #ffffff;">
+                            7:30 - 8:50 PM <br><br>
+                            {{dances.1.second}}<br><br>
+                            {{dances.1.level.second}}
                         </a>
                     </td>
 
                     <td>
-                        <a href="/classinfo" style="display:block; text-decoration: none; color: #ffffff;">
+                        <a href="/classinfo/22" style="display:block; text-decoration: none; color: #ffffff;">
+                            7:30 - 8:50 PM <br><br>
+                            {{dances.2.second}}<br><br>
+                            {{dances.2.level.second}}
+                        </a>
+                    </td>
+
+                    <td>
+                        <a href="/classinfo/32" style="display:block; text-decoration: none; color: #ffffff;">
+                            7:30 - 8:50 PM <br><br>
+                            {{dances.3.second}}<br><br>
+                            {{dances.3.level.second}}
+                        </a>
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td>
+                        <a href="/classinfo/03" style="display:block; text-decoration: none; color: #ffffff;">
                             9:30 - 10:50 PM <br><br>
-                            Aiki<br><br>
-                            Master
+                            {{dances.0.third}}<br><br>
+                            {{dances.0.level.third}}
+                        </a>
+                    </td>
+
+                    <td>
+                        <a href="/classinfo/13" style="display:block; text-decoration: none; color: #ffffff;">
+                            9:30 - 10:50 PM <br><br>
+                            {{dances.1.third}}<br><br>
+                            {{dances.1.level.third}}
+                        </a>
+                    </td>
+
+                    <td>
+                        <a href="/classinfo/23" style="display:block; text-decoration: none; color: #ffffff;">
+                            9:30 - 10:50 PM <br><br>
+                            {{dances.2.third}}<br><br>
+                            {{dances.2.level.third}}
+                        </a>
+                    </td>
+
+                    <td>
+                        <a href="/classinfo/33" style="display:block; text-decoration: none; color: #ffffff;">
+                            9:30 - 10:50 PM <br><br>
+                            {{dances.3.third}}<br><br>
+                            {{dances.3.level.third}}
                         </a>
                     </td>
 
