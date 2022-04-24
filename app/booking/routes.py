@@ -14,11 +14,12 @@ def bookingcomplete():
     return render_template('booking/bookingComplete.html')
 
 
-@blueprint.route('/classinfo')
-def classinfo():
-    return render_template('booking/classInfo.htm')
+@blueprint.route('/classinfo/<int:id>')
+def classinfo(id):
+    workshop = Workshop.query.filter_by(id=id).first_or_404()
+    return render_template('booking/classInfo.htm',workshop=workshop)
 
 @blueprint.route('/workshops')
 def workshops():
-    
-    return render_template('booking/workshops.htm')
+    all_workshops=Workshop.query.all()
+    return render_template('booking/workshops.htm', workshops=all_workshops)
