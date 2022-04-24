@@ -1,8 +1,8 @@
 """first migration
 
-Revision ID: f33c94ea7e8c
+Revision ID: 3e0bcf9a624b
 Revises: 
-Create Date: 2022-04-22 16:34:32.544310
+Create Date: 2022-04-24 14:13:34.211480
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = 'f33c94ea7e8c'
+revision = '3e0bcf9a624b'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -24,8 +24,7 @@ def upgrade():
     sa.Column('email', sa.String(length=40), nullable=True),
     sa.Column('password', sa.String(length=20), nullable=True),
     sa.PrimaryKeyConstraint('id'),
-    sa.UniqueConstraint('email'),
-    sa.UniqueConstraint('password')
+    sa.UniqueConstraint('email')
     )
     op.create_table('workshop',
     sa.Column('id', sa.Integer(), nullable=False),
@@ -35,6 +34,7 @@ def upgrade():
     sa.Column('price', sa.Numeric(precision=20, scale=2), nullable=True),
     sa.Column('fixed_spots', sa.Integer(), nullable=True),
     sa.Column('available_spots', sa.Integer(), nullable=True),
+    sa.Column('picture_url', sa.String(length=260), nullable=True),
     sa.PrimaryKeyConstraint('id')
     )
     op.create_table('userinfo',

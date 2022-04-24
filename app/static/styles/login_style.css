@@ -72,6 +72,7 @@
     position: relative;
     left: 250px;
     cursor: pointer;
+   
 }
 
 .confirm:hover{
@@ -83,9 +84,9 @@
 .register {
     text-decoration: none;
     color: #ED4D4D;
-    font-size: 13px;
+    font-size: 17px;
     font-weight: 900;
-    margin: 20px 0px 0px;
+    margin: 50px 0px 0px;
     text-shadow: 0px 3px 3px #ED4D4D;
     position: relative;
     top: 50px;
@@ -100,14 +101,11 @@
     display: block;
     margin: auto;
     transition: 0.5s;
-    position: relative;
-    left: 50px;
     
- 
 }
 
 .register:hover::after{
-    width: 70%;
+    width: 100%;
 }
 
 .content img{
