@@ -12,6 +12,7 @@ class Workshop(db.Model, CRUDMixin):
     fixed_spots = db.Column(db.Integer)
     available_spots = db.Column(db.Integer)
     userinfos = db.relationship('Userinfo', backref='workshop', lazy=True)
+    picture_url = db.Column(db.String(260))
 
 class Userinfo(db.Model, CRUDMixin):
     id = db.Column(db.Integer, primary_key=True)

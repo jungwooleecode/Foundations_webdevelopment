@@ -39,33 +39,33 @@ db.session.commit()
 
 workshops_data= {
     0 : {
-        'date': datetime.fromisoformat('2022-05-20'), 'name': 'Hip-hop choreography', 'teacher':'Honey J', 'price': 15.99, 'fixed_spots': 30, 'available_spots': 30
+        'date': datetime.fromisoformat('2022-05-20'), 'name': 'Hip-hop choreography', 'teacher':'Honey J', 'price': 15.99, 'fixed_spots': 30, 'available_spots': 30, 'picture_url':'../static/images/workshop.png'
     },
     1 : {
-        'date': datetime.fromisoformat('2022-05-24'), 'name': 'Commercial choreography', 'teacher':'Monica', 'price': 19.99, 'fixed_spots': 30, 'available_spots': 30
+        'date': datetime.fromisoformat('2022-05-24'), 'name': 'Commercial choreography', 'teacher':'Monica', 'price': 19.99, 'fixed_spots': 30, 'available_spots': 30, 'picture_url':'https://www.1millionoutfits.com/wp-content/uploads/2015/05/7-mina-myoung-choreography-1million-dance-studio-clothes.jpg'
     },
     2 : {
-        'date': datetime.fromisoformat('2022-06-03'), 'name': 'Poppin choreography', 'teacher':'Noze', 'price': 10.99, 'fixed_spots': 30, 'available_spots': 30
+        'date': datetime.fromisoformat('2022-06-03'), 'name': 'Poppin choreography', 'teacher':'Noze', 'price': 10.99, 'fixed_spots': 30, 'available_spots': 30, 'picture_url':'../static/images/workshop.png'
     },
     3 : {
-        'date': datetime.fromisoformat('2022-06-23'), 'name': 'choreography', 'teacher':'Lia Kim', 'price': 13.99, 'fixed_spots': 30, 'available_spots': 30
+        'date': datetime.fromisoformat('2022-06-23'), 'name': 'choreography', 'teacher':'Lia Kim', 'price': 13.99, 'fixed_spots': 30, 'available_spots': 30, 'picture_url':'https://www.1millionoutfits.com/wp-content/uploads/2015/05/7-mina-myoung-choreography-1million-dance-studio-clothes.jpg'
     },
     4 : {
-        'date': datetime.fromisoformat('2022-06-30'), 'name': 'Modern dance', 'teacher':'Lee Jung', 'price': 14.99, 'fixed_spots': 30, 'available_spots': 30
+        'date': datetime.fromisoformat('2022-06-30'), 'name': 'Modern dance', 'teacher':'Lee Jung', 'price': 14.99, 'fixed_spots': 30, 'available_spots': 30, 'picture_url':'../static/images/workshop.png'
     },
     5 : {
-        'date': datetime.fromisoformat('2022-07-05'), 'name': 'Heels choreography', 'teacher':'Aiki', 'price': 13.99, 'fixed_spots': 30, 'available_spots': 30
+        'date': datetime.fromisoformat('2022-07-05'), 'name': 'Heels choreography', 'teacher':'Aiki', 'price': 13.99, 'fixed_spots': 30, 'available_spots': 30, 'picture_url':'https://tmilly.com/wp-content/uploads/2018/03/Thumbnail-Tims-YouTube-1200x675.jpg'
     },
     6 : {
-        'date': datetime.fromisoformat('2022-07-20'), 'name': 'K-pop choreography', 'teacher':'Rian', 'price': 18.99, 'fixed_spots': 30, 'available_spots': 30
+        'date': datetime.fromisoformat('2022-07-20'), 'name': 'K-pop choreography', 'teacher':'Rian', 'price': 18.99, 'fixed_spots': 30, 'available_spots': 30, 'picture_url':'../static/images/workshop.png'
     },
     7 : {
-        'date': datetime.fromisoformat('2022-08-01'), 'name': 'K-pop choreography', 'teacher':'Alex', 'price': 18.99, 'fixed_spots': 30, 'available_spots': 30
+        'date': datetime.fromisoformat('2022-08-01'), 'name': 'K-pop choreography', 'teacher':'Alex', 'price': 18.99, 'fixed_spots': 30, 'available_spots': 30, 'picture_url':'https://tmilly.com/wp-content/uploads/2018/03/Thumbnail-Tims-YouTube-1200x675.jpg'
     }
 }
 
 for id, workshop in workshops_data.items():
-    new_workshop = Workshop(id=id, date=workshop['date'], name=workshop['name'], teacher=workshop['teacher'], price=workshop['price'], fixed_spots=workshop['fixed_spots'], available_spots=workshop['available_spots'])
+    new_workshop = Workshop(id=id, date=workshop['date'], name=workshop['name'], teacher=workshop['teacher'], price=workshop['price'], fixed_spots=workshop['fixed_spots'], available_spots=workshop['available_spots'], picture_url=workshop['picture_url'])
     db.session.add(new_workshop)
 
 db.session.commit()
