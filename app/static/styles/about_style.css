@@ -4,13 +4,20 @@
     flex-direction: row;
 }
 
+.aboutus h1{
+    font-size: 40px;
+    font-weight: 900;
+    text-shadow: 5px 0 #A50000, 0 5px #A50000, 5px 0 #A50000, 0 5px #A50000;
+}
+
 .aboutus {
     position: relative;
     left: 100px;
     color: #FFFFFF;
-    margin-bottom: 30px;
+    margin-bottom: 100px;
     margin-top: 30px;
     width: 350px;
+    font-size: 15px;
 
 }
 
@@ -20,5 +27,6 @@
     margin: 10px;
     position: relative;
     left: 300px;
-    top: 30px;
+    top: 100px;
+    border-radius: 30px;
 }

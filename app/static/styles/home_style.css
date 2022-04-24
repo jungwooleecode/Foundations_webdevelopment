@@ -2,21 +2,24 @@
 .content{
     display: flex;
     flex-direction: row;
-    position: relative;
-    left: 100px;
-    margin-top: 110px;
-    margin-bottom: 110px;
+    align-items: center;
+    margin: 50px;
+    justify-content: center;
+    
 }
 
 .content img {
     height: 700px;
     width: auto;
-    padding: 50px;
+    margin: 100px;
+    border-radius: 30px;
+
 }
 
-.content p {
+.intro {
     color: #FFFFFF;
-    font-size: 24px;
-    position: relative;
-    top: 200px;
+    font-size: 30px;
+    text-shadow: 5px 0px #A50000, 0px 5px #A50000, 5px 0px #A50000, 0px 5px #A50000;
+    margin-top: 100px;
+    
 }
