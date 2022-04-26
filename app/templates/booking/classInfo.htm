@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block css %}
-<link rel="stylesheet" href="../static/styles/classinfo_style.css">
+<link rel="stylesheet" type="text/css" href="../static/styles/classinfo_style.css">
 {% endblock %}
 
 {% block body %}
@@ -19,7 +19,7 @@
             <iframe width="560" height="315" src={{workshop.video_url}}>
             </iframe>
             <br>
-            <a href="/book" class="book">
+            <a href="/book/{{workshop.id}}" class="book">
                 Book Now!
             </a>
             <p1>

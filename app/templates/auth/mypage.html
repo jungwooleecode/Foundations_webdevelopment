@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block css %}
-<link rel="stylesheet" href="../static/styles/mypage_style.css">
+<link rel="stylesheet" type="text/css" href="../static/styles/mypage_style.css">
 
 {% endblock %}
 {% block body %}
@@ -10,18 +10,21 @@
         </h1>
         
         <p>If you want to make any change, you can make it here</p>
-        <name>
+        <form>
+            <name>
             Name <br> <input type="text" placeholder={{user.name}} id="name"> <br>
-        </name>
-        <email>
-            Email <br> <input type="text" placeholder={{user.email}} id="email"> <br>
-        </email>
-        <pw>
-            Password <br> <input type="password" placeholder={{user.password}} id="pw"> <br>
-            <checkbox>
-                <input type="checkbox" onclick="visibleFunction()">Show password <br>
-            </checkbox>
-        </pw>
+            </name>
+            <email>
+                Email <br> <input type="text" placeholder={{user.email}} id="email"> <br>
+            </email>
+            <pw>
+                Password <br> <input type="password" placeholder={{user.password}} id="pw"> <br>
+                <checkbox>
+                    <input type="checkbox" onclick="visibleFunction()">Show password <br>
+                </checkbox>
+            </pw>
+        </form>
+        
 
         <a href="/" class="confirm">Confirm</a>
 

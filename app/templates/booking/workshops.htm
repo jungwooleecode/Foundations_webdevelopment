@@ -1,15 +1,32 @@
 {% extends 'base.html' %}
 {% block css %}
-<link rel="stylesheet" href="../static/styles/workshops_style.css">
+<link rel="stylesheet" type="text/css" href="../static/styles/workshops_style.css">
 {% endblock %}
 {% block body %}
     <div class="content">
         <h1>
             Workshops
         </h1>
+        
+        <nav>
+            {% if workshops_pagination.prev_num %}
+              <a href="/workshops?page={{ workshops_pagination.prev_num }}">Previous Page</a>
+            {% else %}
+              <span>Previous Page</span>
+            {% endif %}
+          
+            <span> - </span>
+          
+            {% if workshops_pagination.next_num %}
+              <a href="/workshops?page={{ workshops_pagination.next_num }}">Next Page</a>
+            {% else %}
+              <span>Next Page</span>
+            {% endif %}
+        </nav>
+        
         <div class="workshops">
             <!--For loop here-->
-            {% for workshop in workshops %}
+            {% for workshop in workshops_pagination.items %}
                 <div class="workshop">
                     <a href="/classinfo/{{workshop.id}}">
                         <img src={{workshop.picture_url}}> <br>

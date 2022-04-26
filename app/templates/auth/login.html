@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block css %}
-<link rel="stylesheet" href="../static/styles/login_style.css">
+<link rel="stylesheet" type="text/css" href="../static/styles/login_style.css">
 {% endblock %}
 {% block body %}
     <div class="content">
@@ -8,27 +8,30 @@
             <h1>
                 Log in <br>
             </h1>
-            <div class="email">
-                <p>
-                    Email <br>
-                </p>
+            <form>
+                <div class="email">
+                    <p>
+                        Email <br>
+                    </p>
 
-                <box>
-                    <input type="text" placeholder="" id="emailinput"> <br>
-                </box>
-            </div>
+                    <box>
+                        <input type="text" placeholder="" id="emailinput"> <br>
+                    </box>
+                </div>
 
-            <div class="password">
-                <p>
-                    Password <br>
-                </p>
-                <box>
-                    <input type="password" placeholder="" id="pw"> <br>
-                </box>
-                <checkbox>
-                    <input type="checkbox" onclick="visibleFunction()"> Show password <br>
-                </checkbox>
-            </div>
+                <div class="password">
+                    <p>
+                        Password <br>
+                    </p>
+                    <box>
+                        <input type="password" placeholder="" id="pw"> <br>
+                    </box>
+                    <checkbox>
+                        <input type="checkbox" onclick="visibleFunction()"> Show password <br>
+                    </checkbox>
+                </div>
+            </form>
+            
 
             <a href="/forgot" class="forgotpassword">
                 Forgot password?

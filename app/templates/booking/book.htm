@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block css %}
-<link rel="stylesheet" href="../static/styles/book_style.css">
+<link rel="stylesheet" type="text/css" href="../static/styles/book_style.css">
 {% endblock %}
 {% block body %}
     <div class="content">
@@ -13,36 +13,45 @@
                     CLASS BOOKING INFO
                 </h2>
                 <p>
-                    dancer's name <br>
+                    {{workshop.teacher}} <br>
                 </p>
                 <p>
-                    class name <br>
+                    {{workshop.name}} <br>
                 </p>
                 <p>
-                    time <br>
+                    {{workshop.date}} <br>
                 </p>
                 <p>
                     Address: dancestraße 30-35, 10969 Berlin <br>
                 </p>
                 <p>
-                    Price: 14€ <br>
+                    Price: {{workshop.price}}€ <br>
                 </p>
             </info>
-            <payment>
-                <h3>
-                    CHOOSE PAYMENT OPTION
-                </h3>
-                <radiobutton>
-                    <input type="radio" name="payment" id="card" value="Card">
-                    <label for="card">Card</label><br>
-                    <input type="radio" name="payment" id="paypal" value="PayPal">
-                    <label for="paypal">PayPal</label><br>
-                </radiobutton>
-            </payment>
-            
-            <a href="/bookingcomplete" class="complete">
-                Confirm
-            </a>
+
+            <form method="POST" action="/bookingcomplete">
+                <payment>
+                    <h3>
+                        CHOOSE PAYMENT OPTION
+                    </h3>
+                    <radiobutton>
+                        <input type="radio" name="payment" id="card" value="Card">
+                        <label for="card">Card</label><br>
+                        <input type="radio" name="payment" id="paypal" value="PayPal">
+                        <label for="paypal">PayPal</label><br>
+                    </radiobutton>
+                </payment>
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" name="{{workshop.id}}" id="workshop_{{workshop.id}}" placeholder="">
+                </div>
+
+                <submit>
+                    <input type="submit" value="Confirm">
+                </submit>
+
+            </form>
+
         </div>
         <img src="../static/images/book.jpg" alt="">
     </div>

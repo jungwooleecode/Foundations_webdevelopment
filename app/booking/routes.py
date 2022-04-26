@@ -1,16 +1,21 @@
-from flask import Blueprint, render_template
+from operator import methodcaller
+from flask import Blueprint, render_template, request, current_app
 from app import booking
 from .models import Workshop, Userinfo
 
 blueprint = Blueprint('booking', __name__)
 
-@blueprint.route('/book')
-def book():
-    return render_template('booking/book.htm')
+@blueprint.route('/book/<int:id>')
+def book(id):
+    workshop = Workshop.query.filter_by(id=id).first_or_404()
+    return render_template('booking/book.htm', workshop=workshop)
 
+@blueprint.get('/bookingcomplete')
+def get_bookingcomplete():
+    return render_template('booking/bookingComplete.html')
 
-@blueprint.route('/bookingcomplete')
-def bookingcomplete():
+@blueprint.post('/bookingcomplete')
+def post_bookingcomplete():
     return render_template('booking/bookingComplete.html')
 
 
@@ -21,5 +26,6 @@ def classinfo(id):
 
 @blueprint.route('/workshops')
 def workshops():
-    all_workshops=Workshop.query.all()
-    return render_template('booking/workshops.htm', workshops=all_workshops)
+    page_number = request.args.get('page', 1, type=int)
+    workshops_pagination=Workshop.query.paginate(page_number, current_app.config['WORKSHOPS_PER_PAGE'])
+    return render_template('booking/workshops.htm', workshops_pagination=workshops_pagination)

@@ -54,13 +54,13 @@ workshops_data= {
         'date': datetime.fromisoformat('2022-06-30T13:30:00'), 'name': 'Modern dance', 'teacher':'Lee Jung', 'price': 14.99, 'fixed_spots': 30, 'available_spots': 30, 'picture_url':'../static/images/workshop.png', 'video_url':'https://www.youtube.com/embed/dZsTdOd0eaU?autoplay=1&mute=1'
     },
     5 : {
-        'date': datetime.fromisoformat('2022-07-05T14:30:00'), 'name': 'Heels choreography', 'teacher':'Aiki', 'price': 13.99, 'fixed_spots': 30, 'available_spots': 30, 'picture_url':'https://tmilly.com/wp-content/uploads/2018/03/Thumbnail-Tims-YouTube-1200x675.jpg', 'video_url':'https://www.youtube.com/embed/yOt3mTLpZfw?autoplay=1&mute=1'
+        'date': datetime.fromisoformat('2022-07-05T14:30:00'), 'name': 'Heels choreography', 'teacher':'Aiki', 'price': 13.99, 'fixed_spots': 30, 'available_spots': 30, 'picture_url':'https://tmilly.com/wp-content/uploads/2018/03/Thumbnail-Tims-YouTube-1200x675.jpg', 'video_url':'https://www.youtube.com/embed/WnSyWk9sjY0?autoplay=1&mute=1'
     },
     6 : {
-        'date': datetime.fromisoformat('2022-07-20T15:00:00'), 'name': 'K-pop choreography', 'teacher':'Rian', 'price': 18.99, 'fixed_spots': 30, 'available_spots': 30, 'picture_url':'https://i.ytimg.com/vi/LVzEm9vO-hM/maxresdefault.jpg', 'video_url':'https://www.youtube.com/embed/1JHOl9CSmXk?autoplay=1&mute=1'
+        'date': datetime.fromisoformat('2022-07-20T15:00:00'), 'name': 'K-pop choreography', 'teacher':'Rian', 'price': 18.99, 'fixed_spots': 30, 'available_spots': 30, 'picture_url':'https://i.ytimg.com/vi/LVzEm9vO-hM/maxresdefault.jpg', 'video_url':'https://www.youtube.com/embed/8mMGGFGYgYA?autoplay=1&mute=1'
     },
     7 : {
-        'date': datetime.fromisoformat('2022-08-01T16:30:00'), 'name': 'K-pop choreography', 'teacher':'Alex', 'price': 18.99, 'fixed_spots': 30, 'available_spots': 30, 'picture_url':'https://tmilly.com/wp-content/uploads/2018/03/Thumbnail-Tims-YouTube-1200x675.jpg', 'video_url':'https://www.youtube.com/embed/lT7Q93fy1us?autoplay=1&mute=1'
+        'date': datetime.fromisoformat('2022-08-01T16:30:00'), 'name': 'K-pop choreography', 'teacher':'Alex', 'price': 18.99, 'fixed_spots': 30, 'available_spots': 30, 'picture_url':'https://tmilly.com/wp-content/uploads/2018/03/Thumbnail-Tims-YouTube-1200x675.jpg', 'video_url':'https://www.youtube.com/embed/dZsTdOd0eaU?autoplay=1&mute=1'
     }
 }
 

@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block css %}
-<link rel="stylesheet" href="../static/styles/register_style.css">
+<link rel="stylesheet" type="text/css" href="../static/styles/register_style.css">
 
 {% endblock %}
 {% block body %}
@@ -8,18 +8,21 @@
         <h1>
             Register
         </h1>
-        <name>
-            Name <br> <input type="text" placeholder="" id="name"> <br>
-        </name>
-        <email>
-            Email <br> <input type="text" placeholder="" id="email"> <br>
-        </email>
-        <pw>
-            Password <br> <input type="password" placeholder="" id="pw"> <br>
-            <checkbox>
-                <input type="checkbox" onclick="visibleFunction()">Show password <br>
-            </checkbox>
-        </pw>
+        <form>
+            <name>
+                Name <br> <input type="text" placeholder="" id="name"> <br>
+            </name>
+            <email>
+                Email <br> <input type="text" placeholder="" id="email"> <br>
+            </email>
+            <pw>
+                Password <br> <input type="password" placeholder="" id="pw"> <br>
+                <checkbox>
+                    <input type="checkbox" onclick="visibleFunction()">Show password <br>
+                </checkbox>
+            </pw>
+        </form>
+        
 
         <a href="/" class="register">Sign up</a>
 
