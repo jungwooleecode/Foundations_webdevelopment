@@ -25,6 +25,7 @@ def post_login():
     
     except Exception as error_message:
         error = error_message or 'An error occurred.'
+        current_app.logger.info(f'Error in login: {error}')
         return render_template('auth/login.html', error=error)
 
 @blueprint.get('/logout')
@@ -60,11 +61,40 @@ def post_register():
 
     except Exception as error_message:
         error = error_message or 'An error occurred'
-        current_app.logger.info(f'Error creating an order: {error}')
+        current_app.logger.info(f'Error in register: {error}')
         return render_template('auth/register.html', error=error)
 
-@blueprint.route('/mypage/<int:id>')
-@login_required
-def mypage(id):
+@blueprint.get('/mypage/<int:id>')
+def get_mypage(id):
     user= User.query.filter_by(id=id).first_or_404()
     return render_template('auth/mypage.html', user=user)
+
+@blueprint.post('/mypage/<int:id>')
+def post_mypage(id):
+    try:
+        user= User.query.filter_by(id=id).first_or_404()
+
+        if request.form.get('email'):
+            if User.query.filter_by(email=request.form.get('email')).first():
+                raise Exception('This email already exists.')
+            else:
+                user.email=request.form.get('email')
+        if request.form.get('password'):
+            user.password=request.form.get('password')
+        if request.form.get('name'):
+            user.name=request.form.get('name')
+             
+        user.save()
+        return render_template('auth/mypage.html', user=user)
+
+    except Exception as error_message:
+        error = error_message or 'An error occurred'
+        current_app.logger.info(f'Error in mypage: {error}')
+        return render_template('auth/mypage.html', user=user, error=error)
+
+
+@blueprint.route('/delete/<int:id>')
+def delete(id):
+    user= User.query.filter_by(id=id).first_or_404()
+    user.delete()
+    return redirect(url_for('standard_page.index'))

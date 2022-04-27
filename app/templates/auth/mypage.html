@@ -13,24 +13,28 @@
 
         <form method="POST">
             <name>
-                Name <br> <input type="text" placeholder={{user.name}} name="name" id="name" required> <br>
+                Name <br> <input type="text" placeholder={{user.name}} name="name" id="name"> <br>
             </name>
             <email>
-                Email <br> <input type="text" placeholder={{user.email}} name="email" id="email" required> <br>
+                Email <br> <input type="text" placeholder={{user.email}} name="email" id="email"> <br>
             </email>
             <pw>
-                Password <br> <input type="password" placeholder="" name="password" id="pw" minlength="8" maxlength="15" required> <br>
+                Password <br> <input type="password" placeholder="" name="password" id="pw" minlength="8" maxlength="15"> <br>
                 <checkbox>
                     <input type="checkbox" onclick="visibleFunction()">Show password <br>
                 </checkbox>
             </pw>
+
+            {% if error %}
+                    <br><p style="color: tomato;">{{ error }}</p><br>
+            {% endif %}
 
             <submit>
                 <input type="submit" value="Confirm">
             </submit>
         </form>
         
-        <a href="/" class="delete">
+        <a href="/delete/{{user.id}}" class="delete">
             Delete account
         </a>
        

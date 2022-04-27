@@ -3,6 +3,8 @@ from app import standard_page, booking, auth
 from app.extensions.database import db, migrate
 from app.extensions.authentication import login_manager
 
+login_manager.login_view = 'auth.get_login'
+
 def create_app():
     app= Flask(__name__)
     app.config.from_object('config')
