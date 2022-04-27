@@ -1,4 +1,4 @@
-from app.booking.models import Workshop
+from app.booking.models import Workshop, Userinfo
 from datetime import datetime
 
 def test_booking_renders_workshops(client):
@@ -9,3 +9,17 @@ def test_booking_renders_workshops(client):
   response = client.get('/workshops')
   
   assert b'K-pop choreography' in response.data
+
+def test_get_bookingcomplete_renders(client):
+  
+  response = client.get('/bookingcomplete/1')
+  assert b'Thank you for booking our class!' in response.data
+
+def test_post_bookingcomplete_creates_userinfo(client):
+  
+  response = client.post('/bookingcomplete/2', data={
+    'name':'Jung Woo Lee',
+    'workshop_id': 2
+  })
+
+  assert Userinfo.query.first() is not None

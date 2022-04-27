@@ -1,4 +1,3 @@
-
 from app.extensions.database import db, CRUDMixin
 from datetime import datetime
 

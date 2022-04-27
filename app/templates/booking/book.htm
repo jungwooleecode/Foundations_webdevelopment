@@ -29,7 +29,7 @@
                 </p>
             </info>
 
-            <form method="POST" action="/bookingcomplete">
+            <form method="POST" action="/bookingcomplete/{{workshop.id}}">
                 <payment>
                     <h3>
                         CHOOSE PAYMENT OPTION
@@ -43,8 +43,12 @@
                 </payment>
                 <div>
                     <label for="name">Name</label>
-                    <input type="text" name="{{workshop.id}}" id="workshop_{{workshop.id}}" placeholder="">
+                    <input type="text" name="name" id="name" placeholder="">
                 </div>
+
+                {% if error %}
+                    <br><p style="color: tomato;">{{ error }}</p><br>
+                {% endif %}
 
                 <submit>
                     <input type="submit" value="Confirm">

@@ -1,6 +1,7 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, request, current_app
 from app import auth
 from .models import User
+from .services.create_user import create_user
 
 blueprint = Blueprint('auth', __name__)
 
@@ -8,9 +9,22 @@ blueprint = Blueprint('auth', __name__)
 def forgot():
     return render_template('auth/forgot.html')
 
-@blueprint.route('/login')
-def login():
+@blueprint.get('/login')
+def get_login():
     return render_template('auth/login.html')
+
+@blueprint.post('/login')
+def post_login():
+    try:
+        if not all([ request.form.get('name'), request.form.get('email'), request.form.get('password')]):
+            raise Exception('Please fill out all the fields.')
+
+        create_user(request.form)
+        return render_template('auth/login.html')
+    except Exception as error_message:
+        error = error_message or 'An error occurred'
+        current_app.logger.info(f'Error creating an order: {error}')
+        return render_template('auth/register.html', error=error)
 
 @blueprint.route('/mailbox')
 def mailbox():
