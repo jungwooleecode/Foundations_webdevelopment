@@ -8,28 +8,25 @@
             <h1>
                 Log in <br>
             </h1>
-            <form>
+            <form method="POST">
                 <div class="email">
-                    <p>
-                        Email <br>
-                    </p>
-
                     <box>
-                        <input type="text" placeholder="" id="emailinput"> <br>
+                        Email <br><input type="text" placeholder="" name="email" id="emailinput" required> <br>
                     </box>
                 </div>
 
                 <div class="password">
-                    <p>
-                        Password <br>
-                    </p>
                     <box>
-                        <input type="password" placeholder="" id="pw"> <br>
+                        Password <br><input type="password" placeholder="" name="password" id="pw" required> <br>
                     </box>
                     <checkbox>
                         <input type="checkbox" onclick="visibleFunction()"> Show password <br>
                     </checkbox>
                 </div>
+
+                {% if error %}
+                    <br><p style="color: tomato;">{{ error }}</p><br>
+                {% endif %}
             </form>
             
 

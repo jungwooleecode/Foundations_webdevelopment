@@ -29,7 +29,7 @@
                 </p>
             </info>
 
-            <form method="POST" action="/bookingcomplete/{{workshop.id}}">
+            <form method="POST">
                 <payment>
                     <h3>
                         CHOOSE PAYMENT OPTION
@@ -43,7 +43,7 @@
                 </payment>
                 <div>
                     <label for="name">Name</label>
-                    <input type="text" name="name" id="name" placeholder="">
+                    <input type="text" name="name" id="name" placeholder="" required>
                 </div>
 
                 {% if error %}

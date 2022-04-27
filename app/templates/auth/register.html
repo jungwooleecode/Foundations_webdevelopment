@@ -8,19 +8,22 @@
         <h1>
             Register
         </h1>
-        <form method="POST" action="/login">
+        <form method="POST">
             <name>
-                Name <br> <input type="text" name="name" placeholder="" id="name"> <br>
+                Name <br> <input type="text" name="name" placeholder="" id="name" required> <br>
             </name>
             <email>
-                Email <br> <input type="text" name="email" placeholder="" id="email"> <br>
+                Email <br> <input type="text" name="email" placeholder="" id="email" required> <br>
             </email>
             <pw>
-                Password <br> <input type="password" name="password" placeholder="" id="pw"> <br>
+                Password <br> <input type="password" name="password" placeholder="" id="pw" required> <br>
                 <checkbox>
                     <input type="checkbox" onclick="visibleFunction()">Show password <br>
                 </checkbox>
             </pw>
+            <pw_confirmation>
+                Password_confirmation <br> <input type="password" name="password_confirmation" placeholder="" id="pw" required> <br>
+            </pw_confirmation>
 
             {% if error %}
                     <br><p style="color: tomato;">{{ error }}</p><br>
