@@ -10,24 +10,26 @@
         </h1>
         
         <p>If you want to make any change, you can make it here</p>
-        <form>
+
+        <form method="POST">
             <name>
-            Name <br> <input type="text" placeholder={{user.name}} id="name"> <br>
+                Name <br> <input type="text" placeholder={{user.name}} name="name" id="name" required> <br>
             </name>
             <email>
-                Email <br> <input type="text" placeholder={{user.email}} id="email"> <br>
+                Email <br> <input type="text" placeholder={{user.email}} name="email" id="email" required> <br>
             </email>
             <pw>
-                Password <br> <input type="password" placeholder={{user.password}} id="pw"> <br>
+                Password <br> <input type="password" placeholder="" name="password" id="pw" minlength="8" maxlength="15" required> <br>
                 <checkbox>
                     <input type="checkbox" onclick="visibleFunction()">Show password <br>
                 </checkbox>
             </pw>
+
+            <submit>
+                <input type="submit" value="Confirm">
+            </submit>
         </form>
         
-
-        <a href="/" class="confirm">Confirm</a>
-
         <a href="/" class="delete">
             Delete account
         </a>

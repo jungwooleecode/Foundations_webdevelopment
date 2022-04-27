@@ -26,7 +26,7 @@
             </div>
         </div>
         <nav>
-            <ul class="header items">
+            <ul class="header_items">
                 <li>
                     <a href="/about">About</a>
                 </li>
@@ -34,12 +34,20 @@
                     <a href="/workshops">Workshops</a>
                 </li>
                 <li>
-                    <a href="/mypage">My page</a>
+                    <a href="/mypage/{{current_user.id}}">My page</a>
                 </li>
             </ul>
-            <div class="login">
-                <a href="/login">or LOG IN </a>
-            </div>
+            {% if not current_user.is_authenticated %}
+                <div class="login">
+                    <a href="{{ url_for('auth.get_login') }}">LOG IN </a>
+                </div>
+            {% endif %}
+            {% if current_user.is_authenticated %}
+                <div class="logout">
+                Logged in as {{ current_user.email }}.
+                <a href="/logout">LOG OUT</a>
+                </div>
+            {% endif %}
         </nav>
     </div>
 

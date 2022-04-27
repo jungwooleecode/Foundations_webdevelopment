@@ -1,14 +1,10 @@
 from flask import Blueprint, render_template, request, redirect, url_for, current_app
 from app import auth
 from .models import User
-from .services.create_user import create_user
 from werkzeug.security import generate_password_hash, check_password_hash
+from flask_login import login_required, login_user, logout_user
 
 blueprint = Blueprint('auth', __name__)
-
-@blueprint.route('/forgot')
-def forgot():
-    return render_template('auth/forgot.html')
 
 @blueprint.get('/login')
 def get_login():
@@ -20,19 +16,21 @@ def post_login():
         user = User.query.filter_by(email=request.form.get('email')).first()
 
         if not user:
-            raise Exception('This accound does not exist.')
+            raise Exception('This account does not exist.')
         elif not check_password_hash(user.password, request.form.get('password')):
             raise Exception('The password is not correct.')
-    
-        return redirect(url_for('index.standard_page'))
+
+        login_user(user)
+        return redirect(url_for('standard_page.index'))
     
     except Exception as error_message:
         error = error_message or 'An error occurred.'
         return render_template('auth/login.html', error=error)
 
-@blueprint.route('/mailbox')
-def mailbox():
-    return render_template('auth/mailbox.html')
+@blueprint.get('/logout')
+def logout():
+    logout_user()
+    return redirect(url_for('auth.get_login'))
 
 @blueprint.get('/register')
 def get_register():
@@ -48,8 +46,17 @@ def post_register():
         elif not all([ request.form.get('name'), request.form.get('email'), request.form.get('password')]):
             raise Exception('Please fill out all the fields.')
 
-        create_user(request.form, generate_password_hash)
-        return redirect(url_for('index.standard_page'))
+        user=User(
+        name=request.form.get('name'),
+        email=request.form.get('email'),
+        password=generate_password_hash(request.form.get('password'))
+        )
+
+        user.save()
+        
+        user = User.query.filter_by(email=request.form.get('email')).first()
+        login_user(user)
+        return redirect(url_for('standard_page.index'))
 
     except Exception as error_message:
         error = error_message or 'An error occurred'
@@ -57,10 +64,7 @@ def post_register():
         return render_template('auth/register.html', error=error)
 
 @blueprint.route('/mypage/<int:id>')
+@login_required
 def mypage(id):
     user= User.query.filter_by(id=id).first_or_404()
     return render_template('auth/mypage.html', user=user)
-
-@blueprint.route('/reset')
-def reset():
-    return render_template('auth/reset.html')

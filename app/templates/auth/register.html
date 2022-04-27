@@ -16,13 +16,12 @@
                 Email <br> <input type="text" name="email" placeholder="" id="email" required> <br>
             </email>
             <pw>
-                Password <br> <input type="password" name="password" placeholder="" id="pw" required> <br>
-                <checkbox>
-                    <input type="checkbox" onclick="visibleFunction()">Show password <br>
-                </checkbox>
+                Password <br> <input type="password" name="password" placeholder="" id="pw" minlength="8" maxlength="15" required> <br>
+
             </pw>
             <pw_confirmation>
-                Password_confirmation <br> <input type="password" name="password_confirmation" placeholder="" id="pw" required> <br>
+                Password_confirmation <br> <input type="password" name="password_confirmation" placeholder="" id="pw" minlength="8" maxlength="15" required> <br>
+
             </pw_confirmation>
 
             {% if error %}

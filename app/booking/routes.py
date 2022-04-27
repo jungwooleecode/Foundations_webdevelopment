@@ -2,10 +2,12 @@ from flask import Blueprint, render_template, request, current_app
 from app import booking
 from .models import Workshop, Userinfo
 from .services.create_userinfo import create_userinfo
+from flask_login import login_required
 
 blueprint = Blueprint('booking', __name__)
 
 @blueprint.get('/book/<int:id>')
+@login_required
 def get_book(id):
     workshop = Workshop.query.filter_by(id=id).first_or_404()
     return render_template('booking/book.htm', workshop=workshop)

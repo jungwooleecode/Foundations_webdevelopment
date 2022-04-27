@@ -17,7 +17,7 @@
 
                 <div class="password">
                     <box>
-                        Password <br><input type="password" placeholder="" name="password" id="pw" required> <br>
+                        Password <br><input type="password" placeholder="" name="password" id="pw" minlength="8" maxlength="15" required> <br>
                     </box>
                     <checkbox>
                         <input type="checkbox" onclick="visibleFunction()"> Show password <br>
@@ -27,16 +27,11 @@
                 {% if error %}
                     <br><p style="color: tomato;">{{ error }}</p><br>
                 {% endif %}
+
+                <submit>
+                    <input type="submit" value="Log in">
+                </submit>
             </form>
-            
-
-            <a href="/forgot" class="forgotpassword">
-                Forgot password?
-            </a>
-
-            <a href="/" class="confirm">
-                Log in
-            </a>
 
             <a href="/register" class="register">
                 <br> Don't have an account yet? Register here!
