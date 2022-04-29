@@ -1,8 +1,8 @@
 """first
 
-Revision ID: cf41408d0cad
+Revision ID: 820507290581
 Revises: 
-Create Date: 2022-04-29 11:38:30.735546
+Create Date: 2022-04-29 12:20:25.515138
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = 'cf41408d0cad'
+revision = '820507290581'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -28,19 +28,19 @@ def upgrade():
     op.create_index(op.f('ix_user_email'), 'user', ['email'], unique=True)
     op.create_table('workshop',
     sa.Column('id', sa.Integer(), nullable=False),
-    sa.Column('date', sa.DateTime(), nullable=True),
-    sa.Column('name', sa.String(length=20), nullable=True),
-    sa.Column('teacher', sa.String(length=50), nullable=True),
-    sa.Column('price', sa.Numeric(precision=20, scale=2), nullable=True),
+    sa.Column('date', sa.String(length=120), nullable=True),
+    sa.Column('name', sa.String(length=120), nullable=True),
+    sa.Column('teacher', sa.String(length=150), nullable=True),
+    sa.Column('price', sa.Numeric(precision=100, scale=2), nullable=True),
     sa.Column('fixed_spots', sa.Integer(), nullable=True),
     sa.Column('available_spots', sa.Integer(), nullable=True),
-    sa.Column('picture_url', sa.String(length=260), nullable=True),
-    sa.Column('video_url', sa.String(length=260), nullable=True),
+    sa.Column('picture_url', sa.String(length=300), nullable=True),
+    sa.Column('video_url', sa.String(length=300), nullable=True),
     sa.PrimaryKeyConstraint('id')
     )
     op.create_table('userinfo',
     sa.Column('id', sa.Integer(), nullable=False),
-    sa.Column('name', sa.String(length=50), nullable=True),
+    sa.Column('name', sa.String(length=150), nullable=True),
     sa.Column('workshop_id', sa.Integer(), nullable=True),
     sa.ForeignKeyConstraint(['workshop_id'], ['workshop.id'], ),
     sa.PrimaryKeyConstraint('id')
