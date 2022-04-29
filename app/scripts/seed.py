@@ -1,5 +1,5 @@
 from app.app import create_app
-from app.booking.models import Workshop
+from app.booking.models import Workshop, Userinfo
 from app.extensions.database import db
 from datetime import datetime
 
@@ -55,5 +55,57 @@ workshops_data= {
 for id, workshop in workshops_data.items():
     new_workshop = Workshop(id=id, date=workshop['date'], name=workshop['name'], teacher=workshop['teacher'], price=workshop['price'], fixed_spots=workshop['fixed_spots'], available_spots=workshop['available_spots'], picture_url=workshop['picture_url'], video_url=workshop['video_url'])
     db.session.add(new_workshop)
+
+db.session.commit()
+
+userinfos_data={
+    1: {
+        'name':'jung', 'workshop_id':1
+    },
+    2: {
+        'name':'jung', 'workshop_id':2
+    },
+    3: {
+        'name':'jung', 'workshop_id':3
+    },
+    4: {
+        'name':'jung', 'workshop_id':4
+    },
+    5: {
+        'name':'jung', 'workshop_id':5
+    },
+    6: {
+        'name':'jung', 'workshop_id':6
+    },
+    7: {
+        'name':'jung', 'workshop_id':7
+    },
+    8: {
+        'name':'jung', 'workshop_id':8
+    },
+    9: {
+        'name':'jung', 'workshop_id':9
+    },
+    10: {
+        'name':'jung', 'workshop_id':10
+    },
+    11: {
+        'name':'jung', 'workshop_id':11
+    },
+    12: {
+        'name':'jung', 'workshop_id':12
+    },
+    13: {
+        'name':'jung', 'workshop_id':13
+    },
+    14: {
+        'name':'jung', 'workshop_id':14
+    }
+
+}
+
+for id, userinfo in userinfos_data.items():
+    new_userinfo = Userinfo(id=id, name=userinfo['name'], workshop_id=userinfo['workshop_id'])
+    db.session.add(new_userinfo)
 
 db.session.commit()
