@@ -1,7 +1,6 @@
 from flask import Blueprint, render_template, request, current_app
 from app import booking
 from .models import Workshop, Userinfo
-from .services.create_userinfo import create_userinfo
 from flask_login import login_required
 
 blueprint = Blueprint('booking', __name__)
@@ -19,7 +18,12 @@ def post_book(id):
         if not all([ request.form.get('name'), request.form.get('payment')]):
             raise Exception('Please fill out all the fields.')
         
-        create_userinfo(request.form, id)
+        userinfo = Userinfo(
+        name=request.form.get('name'),
+        workshop_id=id
+        )
+        
+        userinfo.save()
 
         workshop.available_spots=workshop.available_spots-1
         workshop.save()
