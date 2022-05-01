@@ -20,11 +20,6 @@ def test_classinfo_success(client):
   response = client.get('/classinfo')
   assert response.status_code == 200
 
-def test_bookingcomplete_success(client):
-  # Page loads
-  response = client.get('/bookingcomplete')
-  assert response.status_code == 200
-
 def test_book_success(client):
   # Page loads
   response = client.get('/book')
