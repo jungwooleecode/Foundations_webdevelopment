@@ -32,9 +32,9 @@ def post_book(id):
         current_app.logger.info(f'Error in booking: {error}')
         return render_template('booking/book.htm', workshop=workshop, error=error)
 
-@blueprint.route('/bookingcomplete')
-def bookingcomplete():
-    return render_template('booking/bookingComplete.html')
+# @blueprint.route('/bookingcomplete')
+# def bookingcomplete():
+#     return render_template('booking/bookingComplete.html')
 
 @blueprint.route('/classinfo/<int:id>')
 def classinfo(id):

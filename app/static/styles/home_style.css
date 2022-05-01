@@ -13,6 +13,8 @@ body.light-theme{
     align-items: center;
     margin: 50px;
     justify-content: center;
+    position: relative;
+    left: -30px;
     
 }
 
