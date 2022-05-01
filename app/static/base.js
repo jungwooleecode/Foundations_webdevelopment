@@ -41,3 +41,19 @@ function switchDarkLightTheme(){
     document.getElementById('icon').onclick=toggleTheme;
   })();
 }
+
+function togglePopup(){
+  const available_spots= Number(document.getElementById('book').className);
+  const book_id=document.getElementById('book');
+  if(available_spots<1){
+    popUp.style.opacity='1';
+    popUp.style.visibility='visible';
+    book_id.href='#';
+  }
+}
+
+function closeButton(){
+  const popUp=document.getElementById('popUp');
+  popUp.style.opacity='0';
+  popUp.style.visibility='hidden';
+}

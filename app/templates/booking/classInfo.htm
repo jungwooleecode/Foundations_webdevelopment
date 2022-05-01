@@ -15,11 +15,16 @@
 
             <p><br>Lorem ipsum dolor sit amet, consectetur adipiscing <br> elit, sed do eiusmod tempor incididunt ut <br>labore et dolore magna aliqua. Quis varius quam <br>quisque id diam vel quam elementum pulvinar. Non curabitur<br> gravida arcu ac tortor dignissim. Amet nisl suscipit <br>adipiscing bibendum est. Vitae nunc sed velit dignissim <br>sodales ut eu. Aliquet sagittis id consectetur purus ut <br>faucibus pulvinar. </p>
         </div>
+        <div id="popUp">
+            <img src="../static/images/close.png" class="close-button" onclick="closeButton()"> <br>
+            There is no available spot 😢 <br>
+            Check out other workshops 😊
+        </div>
         <div class="rightside">
             <iframe width="560" height="315" src={{workshop.video_url}}>
             </iframe>
             <br>
-            <a href="/book/{{workshop.id}}" class="book">
+            <a href="/book/{{workshop.id}}" id="book" onclick="togglePopup()" class="{{workshop.available_spots}}">
                 Book Now!
             </a>
             <p1>
