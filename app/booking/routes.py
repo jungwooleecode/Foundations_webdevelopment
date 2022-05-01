@@ -24,7 +24,7 @@ def post_book(id):
         )
         userinfo.save()
 
-        # workshop.update_spots()
+        workshop.update_spots()
         
         payment_method=request.form['payment']
         return render_template('booking/bookingComplete.html', payment_method=payment_method)
