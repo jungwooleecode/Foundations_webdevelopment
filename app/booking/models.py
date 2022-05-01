@@ -12,6 +12,10 @@ class Workshop(db.Model, CRUDMixin):
     video_url= db.Column(db.String(300))
     userinfos = db.relationship('Userinfo', backref='workshop', lazy=True)
 
+    def update_spots(self):
+        self.available_spots -= 1
+        self.save()
+
 class Userinfo(db.Model, CRUDMixin):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(150))
