@@ -1,10 +1,10 @@
 
-:root{
+body.dark-theme{
     --tertiary-color: white;
     --secondary-color: #B60000;
 }
 
-.light-theme{
+body.light-theme{
     --tertiary-color: black;
     --secondary-color: #FF4444;
 }

@@ -1,10 +1,10 @@
 
-:root{
+body.dark-theme{
     --tertiary-color: white;
     --secondary-color: #B60000;
 }
 
-.light-theme{
+body.light-theme{
     --tertiary-color: black;
     --secondary-color: #FF4444;
 }
@@ -22,7 +22,7 @@
 .content h1{
     font-size: 60px;
     font-weight: 900;
-    text-shadow: 5px 0px #A50000, 0px 5px #A50000, 5px 0px #A50000, 0px 5px #A50000;
+    text-shadow: 2px 0px #A50000, 0px 2px #A50000, 2px 0px #A50000, 0px 2px #A50000;
     margin-bottom: 20px;
 }
 

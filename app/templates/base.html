@@ -14,8 +14,7 @@
             {% block css %}{% endblock %}
         {% endblock %}
     </head>
-<body>
-
+<body id="body" class="light-theme">
     <div class="header">
         <div class="logos">
             <div class="logo">
@@ -25,33 +24,44 @@
                 <br>: Global dance workshops 2022!
             </div>
         </div>
+
         <nav>
-            <img src="../static/images/sun.png" id="icon" onclick="lightTheme()">
-            <ul class="header_items">
-                
-                <li>
-                    <a href="/about">About</a>
-                </li>
-                <li>
-                    <a href="/workshops">Workshops</a>
-                </li>
-                {% if current_user.is_authenticated %}
-                    <li>
-                        <a href="/mypage/{{current_user.id}}">My page</a>
-                    </li>
+            <img src="../static/images/moon.png" id="icon" onclick="switchDarkLightTheme()">
+            <div class="auth">
+                {% if not current_user.is_authenticated %}
+                    <div class="login">
+                        <a href="{{ url_for('auth.get_login') }}">LOG IN </a>
+                    </div>
                 {% endif %}
-            </ul>
-            {% if not current_user.is_authenticated %}
-                <div class="login">
-                    <a href="{{ url_for('auth.get_login') }}">LOG IN </a>
+                {% if current_user.is_authenticated %}
+                    <div class="logout">
+                    Logged in as {{ current_user.email }}.
+                    <a href="/logout">LOG OUT</a>
+                    </div>
+                {% endif %}
+            </div>
+            <div class="full-menu">
+                <div class="menu">
+                    <a href="#" class="menu-text" >
+                        <span>MENU</span>
+                    </a>
+                    <ul class="header_items">
+                        
+                        <li>
+                            <a href="/about">About</a> 
+                        </li>
+                        <li>
+                            <a href="/workshops">Workshops</a> 
+                        </li>
+                        {% if current_user.is_authenticated %}
+                            <li>
+                                <a href="/mypage/{{current_user.id}}">My page</a>
+                            </li>
+                        {% endif %}
+                    </ul>                
                 </div>
-            {% endif %}
-            {% if current_user.is_authenticated %}
-                <div class="logout">
-                Logged in as {{ current_user.email }}.
-                <a href="/logout">LOG OUT</a>
-                </div>
-            {% endif %}
+                <div id="dropdownBg"></div>
+            </div>
         </nav>
     </div>
 
@@ -91,5 +101,6 @@
             </li>
         </ul>
     </footer>
+    <script src="../static/menu.js"></script>
 </body>
 </html>

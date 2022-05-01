@@ -1,9 +1,9 @@
 
-:root{
+body.dark-theme{
     --tertiary-color: white;
 }
 
-.light-theme{
+body.light-theme{
     --tertiary-color: black;
 }
 
@@ -15,7 +15,7 @@
 .aboutus h1{
     font-size: 40px;
     font-weight: 900;
-    text-shadow: 5px 0 #A50000, 0 5px #A50000, 5px 0 #A50000, 0 5px #A50000;
+    text-shadow: 2px 0px #A50000, 0px 2px #A50000, 2px 0px #A50000, 0px 2px #A50000;
 }
 
 .aboutus {

@@ -7,12 +7,37 @@ function visibleFunction() {
     }
   }
 
-function lightTheme(){
-  var icon =document.getElementById("icon");
-  document.body.classList.toggle("light-theme");
-  if(document.body.classList.contains("light-theme")){
-    icon.src="../static/images/moon.png";
-  }else{
-    icon.src="../static/images/sun.png";
+function switchDarkLightTheme(){
+
+  function setThemeFromCookie() {
+    const themeState = document.getElementById('body');
+    themeState.className = isThemeSelected() ? 'dark-theme' : 'light-theme';
   }
+
+  function switchState(){
+    document.getElementById('icon').onclick=isThemeSelected();
+  }
+
+  function isThemeSelected() {
+    return document.cookie.match(/theme=dark/i) != null;
+  }
+
+  function toggleTheme() {
+    const themeState = document.getElementById('body');
+    const currentState = themeState.className;
+    const newState = currentState == 'dark-theme' ? 'light-theme' : 'dark-theme';
+    if(newState==='light-theme'){
+      document.getElementById('icon').src="../static/images/moon.png"
+    }else{
+      document.getElementById('icon').src="../static/images/sun.png"
+    }
+    themeState.className = newState;
+    document.cookie = 'theme=' + (newState == 'light-theme' ? 'light' : 'dark');
+  }
+
+  (function() {
+    setThemeFromCookie();
+    switchState();
+    document.getElementById('icon').onclick=toggleTheme;
+  })();
 }

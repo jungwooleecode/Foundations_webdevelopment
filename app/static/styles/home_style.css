@@ -1,9 +1,9 @@
 
-:root{
+body.dark-theme{
     --tertiary-color: white;
 }
 
-.light-theme{
+body.light-theme{
     --tertiary-color: black;
 }
 
@@ -27,7 +27,7 @@
 .intro {
     color: var(--tertiary-color);
     font-size: 30px;
-    text-shadow: 5px 0px #A50000, 0px 5px #A50000, 5px 0px #A50000, 0px 5px #A50000;
+    text-shadow: 2px 0px #A50000, 0px 2px #A50000, 2px 0px #A50000, 0px 2px #A50000;
     margin-top: 30px;
     margin-left: 50px;
     

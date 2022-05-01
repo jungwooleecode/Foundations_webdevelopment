@@ -1,9 +1,9 @@
 
-:root{
+body.dark-theme{
     --tertiary-color: white;
 }
 
-.light-theme{
+body.light-theme{
     --tertiary-color: black;
 }
 
