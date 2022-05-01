@@ -1,4 +1,12 @@
 
+:root{
+    --tertiary-color: white;
+}
+
+.light-theme{
+    --tertiary-color: black;
+}
+
 .content {
     display: flex;
     flex-direction: row;
@@ -13,7 +21,7 @@
 .aboutus {
     position: relative;
     left: 100px;
-    color: #FFFFFF;
+    color: var(--tertiary-color);
     margin-bottom: 100px;
     margin-top: 30px;
     width: 350px;

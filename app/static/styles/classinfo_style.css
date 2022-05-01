@@ -1,9 +1,19 @@
 
+:root{
+    --tertiary-color: white;
+    --secondary-color: #B60000;
+}
+
+.light-theme{
+    --tertiary-color: black;
+    --secondary-color: #FF4444;
+}
+
 .content {
     display: flex;
     flex-direction: row;
     margin: 100px 30px;
-    color: #FFFFFF;
+    color: var(--tertiary-color);
     position: relative;
     left: 100px;
     width: 1000px;
@@ -35,17 +45,17 @@
 
 .book {
     text-decoration: none;
-    color: #FFFFFF;
+    color: var(--tertiary-color);
     font-size: 40px;
     margin: 10px 0 30px 0;
-    border: 1px solid #FFFFFF;
+    border: 1px solid var(--tertiary-color);
     padding: 10px 35px;
     cursor: pointer;
     transition: 500ms;
 }
 
 .book:hover{
-    background: #B60000;
+    background: var(--secondary-color);
 }
 
 .rightside p1{

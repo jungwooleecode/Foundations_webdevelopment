@@ -1,7 +1,17 @@
 
+:root{
+    --primary-color: black;
+    --tertiary-color: white;
+}
+
+.light-theme{
+    --primary-color: white;
+    --tertiary-color: black;
+}
+
 .content {
     margin: 70px 100px;
-    color: #FFFFFF;
+    color: var(--tertiary-color);
     justify-content: center;
     
 }
@@ -14,7 +24,7 @@
 
 .content nav a{
     text-decoration: none;
-    color: #FFFFFF;
+    color: var(--tertiary-color);
     text-decoration: underline;
 }
 
@@ -39,15 +49,15 @@
 .workshop:hover{
     transform: translateY(-15px);
     transition: 500ms;
-    border: white solid 3px;
-    background: #FFFFFF;
+    border: var(--tertiary-color) solid 3px;
+    background: var(--tertiary-color);
     border-radius: 30px;
     padding: 5px;
 }
 
 .workshop a{
     text-decoration: none;
-    color: black;
+    color: var(--primary-color);
     font-weight: 900;
     font-size: 20px;
 }

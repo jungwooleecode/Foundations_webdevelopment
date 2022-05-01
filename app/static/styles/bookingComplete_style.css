@@ -1,6 +1,14 @@
 
+:root{
+    --tertiary-color: white;
+}
+
+.light-theme{
+    --tertiary-color: black;
+}
+
 .content {
-    color: #FFFFFF;
+    color: var(--tertiary-color);
     display: flex;
     align-items: center;
     flex-direction: column;
