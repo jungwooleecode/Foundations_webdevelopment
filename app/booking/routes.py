@@ -22,7 +22,6 @@ def post_book(id):
         name=request.form.get('name'),
         workshop_id=id
         )
-
         userinfo.save()
 
         workshop.update_spots()
@@ -34,10 +33,6 @@ def post_book(id):
         error = error_message or 'An error occurred'
         current_app.logger.info(f'Error in booking: {error}')
         return render_template('booking/book.htm', workshop=workshop, error=error)
-
-@blueprint.route('/bookingcomplete')
-def bookingcomplete():
-    return render_template('booking/bookingComplete.html')
 
 @blueprint.route('/classinfo/<int:id>')
 def classinfo(id):
