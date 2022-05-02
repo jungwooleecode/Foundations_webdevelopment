@@ -16,13 +16,15 @@ The web app was deployed using Heroku(Paas).
 
 ## Getting Started
 
-### Dependencies
+### Dependencies(Prerequisites)
 
-all the packages required are indicated in 'requirements.txt'.
+Activated venv file by running 'source venv/bin/activate'.
+Simply, python launcher and pip package should be on your laptop
+and all the packages required are indicated in 'requirements.txt'.
 
 ### Executing program
 
-When all the prerequisites are set up, activate 'venv' and run 'python run.py' in terminal.
+When all the prerequisites are set up, run 'python run.py' in terminal.
 
 ## Help
 
